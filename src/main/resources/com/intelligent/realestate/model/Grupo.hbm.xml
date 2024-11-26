@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.app.web.model">
+
+	<!-- Nombre de la clase y el nombre de la tabla en la DB -->
+	<class name="Grupo" table="grupos">
+		<!-- idArrendador de la clase Arrendador y el nombre de la referencia en 
+			la DB -->
+		<id name="idGrupo" column="id_grupos">
+			<!-- Le indicamos que es de auto_increment con el identity -->
+			<generator class="identity"></generator>
+		</id>
+		<!-- Ponemos los demas atributos de Arrendador Recoredemos que primero 
+			es el nombre de como esta en tu clase y luego de como esta en la DB -->
+		<property name="nombre" column="nombre"></property>
+		<property name="folio" column="folio"></property>
+
+	</class>
+
+</hibernate-mapping>

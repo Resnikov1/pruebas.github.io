@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+
+<title>Inicio sesión</title>
+<!-- Bootstrap link css -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- -->
+
+	<div class="logo">
+		<img src="img/smartgrid.png" alt="mi logo" />
+		<div class="container">
+			<form action="#" th:object="${user}" th:action="@{guardarUsuario}"
+				method="POST" class="form-group">
+				<div class="mb-3 bg p-5 rounded">
+					<h2 class="text-center">Inicio sesión</h2>
+
+					<label for="exampleFormControlInput1"
+						class="form-label mt-4 fw-semibold">Correo electrónico</label> <input
+						type="email" name="email" class="form-control"
+						id="exampleFormControlInput1" placeholder="nombre@ejemplo.com"
+						required /> <label for="exampleFormControlInput1"
+						class="form-label mt-3 fw-semibold">Contraseña</label> <input
+						type="password" name="password" class="form-control"
+						id="exampleFormControlInput1" required /> <input type="submit"
+						class="form-control btn-color mt-3" id="exampleFormControlInput1" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

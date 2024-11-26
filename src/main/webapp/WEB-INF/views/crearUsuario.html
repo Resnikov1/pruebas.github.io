@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Agregar Usuario</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<h2>Nueva Usuario</h2>
+	<div class="bd-content ps-lg-4">
+		<form method="post" class="col card p-3 mb-5" action="#"
+			th:action="@{/guardarNuevoUsuario}" th:object="${usuario}">
+			<table class="table table-striped">
+				<tr>
+					<td>ID:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{idUsuario}" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Nombre:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{nombre}" /></td>
+				</tr>
+				<tr>
+					<td>Apellido Paterno:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{apellidoPaterno}" /></td>
+				</tr>
+				<tr>
+					<td>Apellido Materno:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{apellidoMaterno}" /></td>
+				</tr>
+				<tr>
+					<td>Correo:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{correo}" /></td>
+				</tr>
+				<tr>
+					<td>Contraseña:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{password}" /></td>
+				</tr>
+				<tr>
+					<td>Numero de Empleado:</td>
+					<td><input class="form-control" type="text"
+						th:field="*{numeroEmpleado}" /></td>
+				</tr>
+				<tr>
+					<td>Es Administrador:</td>
+					<td><select th:field="*{superUsuario}">
+							<option value="volvo">SI</option>
+							<option value="saab">NO</option>
+
+					</select></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button class="btn btn-primary" type="submit">Guardar</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

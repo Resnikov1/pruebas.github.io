@@ -1,0 +1,30 @@
+body {
+	background-color: #c0d6df;
+	height: 100%;
+}
+
+.logo {
+	position: absolute;
+	top: 10%;
+	left: 36%;
+}
+
+.logo img {
+	width: 550px;
+	top: 100px;
+}
+
+form {
+	width: 90%;
+	margin: auto;
+	padding-top: 100px;
+}
+
+.bg {
+	background-color: #ffffff;
+}
+
+.btn-color {
+	background-color: #DD6E42;
+	border: none;
+}
